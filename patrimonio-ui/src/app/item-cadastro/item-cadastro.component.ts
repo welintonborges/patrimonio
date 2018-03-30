@@ -10,18 +10,22 @@ import { ItemService } from './../item/item.service';
 export class ItemCadastroComponent implements OnInit {
 
   itens = [
+  //  {etiqueta:'AA1234', descricao: 'Notebook', dataAquisicao: new Date()},
+  //  {etiqueta:'BB9876', descricao: 'Mouse', dataAquisicao: new Date()}
+    
 
   ];
   constructor(private itemService: ItemService) { }
 
   ngOnInit() {
-    this.consultar();
+   this.consultar();
   }
 
+  
   consultar() {
 
     this.itemService.listar()
-      .subscribe(dados => this.itens = dados);
+     .subscribe(dados => this.itens = dados);
   }
 
 }

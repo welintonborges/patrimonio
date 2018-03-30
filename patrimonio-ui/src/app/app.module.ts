@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 import { DataTableModule } from 'primeng/primeng';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ItemCadastroComponent } from './item-cadastro/item-cadastro.component';
@@ -18,7 +20,8 @@ import { ItemService } from './item/item.service';
   imports: [
     BrowserModule,
 
-    DataTableModule
+    DataTableModule,
+    HttpClientModule 
   ],
   providers: [
     ItemService
